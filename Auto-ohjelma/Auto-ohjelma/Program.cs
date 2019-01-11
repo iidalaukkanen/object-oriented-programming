@@ -8,13 +8,11 @@ namespace Auto_ohjelma
         {
             Car car = new Car();
             car.AskData();
-
-            Car newCar = new Car();
-            newCar.AskData();
-
             car.ShowInfo();
-            Console.WriteLine("\n_______________________\n");
-            newCar.ShowInfo();
+            car.Brake();
+
+
+
             Console.WriteLine("\n_______________________\n");
         }
     }
