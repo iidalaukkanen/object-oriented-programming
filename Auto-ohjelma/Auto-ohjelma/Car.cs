@@ -11,7 +11,6 @@ namespace Auto_ohjelma
 
         public Car()
         {
-
         }
 
         public void AskData()
@@ -21,10 +20,7 @@ namespace Auto_ohjelma
             Console.Write("Syötä huippunopeus: ");
             string speedValue = Console.ReadLine();
 
-            if (!string.IsNullOrEmpty(speedValue))
-            {
-                speed = int.Parse(speedValue);
-            }
+            int.TryParse(speedValue, out speed);
         }
         
         public void ShowInfo()
@@ -32,17 +28,24 @@ namespace Auto_ohjelma
             Console.WriteLine($"Auton {this.brand} huippunopeus on {this.speed}.");
         }
 
-        public void Accelerate(int iSpeed)
+        public void Accelerate(string speedValue = "15")
         {
-            if (iSpeed >= 0)
+            if (!int.TryParse(speedValue, out int iSpeed))
+            {
+                iSpeed = 0;
+            }
+            
+            if (iSpeed > 0)
             {
                 this.speed += iSpeed;
                 Console.WriteLine($"Nopeutta lisättiin {iSpeed}. Uusi nopeus on nyt {this.speed} km/h.\n");
             }
+
             else if (iSpeed == 0)
             {
                 Console.WriteLine("Ei muutosta nopeuteen.");
             }
+
             else
             {
                 Console.WriteLine("Negatiivista muutosta ei sallita.");

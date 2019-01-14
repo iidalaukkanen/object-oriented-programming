@@ -9,6 +9,8 @@ namespace Auto_ohjelma
             Car car = new Car();
             car.AskData();
             car.ShowInfo();
+            Console.WriteLine("Anna luku, jolla auton nopeutta lisätään:  ");
+            car.Accelerate(Console.ReadLine());
             car.Brake();
 
 
