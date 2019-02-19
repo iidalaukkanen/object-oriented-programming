@@ -35,7 +35,10 @@ namespace Kirjallisuusohjelma
 
                     case ConsoleKey.D3:
                         Console.Clear();
-                        
+                        firstBook.Price = firstBook._price;
+                        secondBook.Price = secondBook._price;
+                        Console.WriteLine("Kirjojen hintoja on alennettu!");
+                        Console.ReadKey();
                         break;
 
                     case ConsoleKey.X:

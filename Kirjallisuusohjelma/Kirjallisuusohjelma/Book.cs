@@ -61,5 +61,17 @@ namespace Kirjallisuusohjelma
             Console.Write("Syötä uusi genre:");
             genreName = Console.ReadLine();
         }
+
+        public double Price
+        {
+            get { return _price; }
+            set
+            {
+                if (value > 30)
+                    _price = value * 0.9;
+                else
+                    _price = value;
+            }
+        }
     }
 }
