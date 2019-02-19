@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Globalization;
 
 namespace Kirjallisuusohjelma
 {
@@ -72,6 +73,23 @@ namespace Kirjallisuusohjelma
                 else
                     _price = value;
             }
+        }
+
+        public string Author
+        {
+            get
+            {
+                return author;
+            }
+        }
+
+        public void PrintBook()
+        {
+            Console.WriteLine($"Kirja:\t\t{title}\n" +
+                $"Julkaisija:\t{publisher}\n" +
+                $"Hinta:\t\t{_price.ToString("c", CultureInfo.CurrentCulture)}\n" +
+                $"Genre:\t\t{genreName}\n" +
+                $"___________________________________\n");
         }
     }
 }
