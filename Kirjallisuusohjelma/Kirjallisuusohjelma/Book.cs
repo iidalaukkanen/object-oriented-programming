@@ -9,7 +9,7 @@ namespace Kirjallisuusohjelma
         public string title;
         public string author;
         public string publisher;
-        private double _price;
+        public double _price;
         public static string genreName;
 
         public Book()
@@ -47,8 +47,10 @@ namespace Kirjallisuusohjelma
                                   $"Kirjailija: {this.author}\n" +
                                   $"Julkaisija: {this.publisher}\n" +
                                   $"Genre: {genreName}\n" +
-                                  $"Hinta: {this._price:N2} €.");
+                                  $"Hinta: {this._price:N2} €.\n" +
+                                  $"___________________________\n");
             }
+            
 
             else
                 Console.WriteLine($"Kirjaa {name} ei löytynyt.");
@@ -56,7 +58,8 @@ namespace Kirjallisuusohjelma
     
         public static void ChangeGenre()
         {
-            Console.WriteLine("Syötä gerne:");
+            Console.Write("Syötä uusi genre:");
+            genreName = Console.ReadLine();
         }
     }
 }
