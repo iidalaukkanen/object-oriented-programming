@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Globalization;
 
 namespace Kulkuvälineohjelma
 {
-    class Vehicle
+    abstract class Vehicle
     {
         protected string type;
         protected string brand;
@@ -13,13 +14,9 @@ namespace Kulkuvälineohjelma
 
         public Vehicle()
         {
-            type = null;
-            brand = null;
-            year = 0;
-            price = 0.00;
         }
 
-        public Vehicle(string type, string brand, int year, int price)
+        public Vehicle(string type, string brand, double year, double price)
         {
             this.type = type;
             this.brand = brand;
@@ -32,7 +29,7 @@ namespace Kulkuvälineohjelma
             Console.WriteLine($"Tyyppi:\t\t{this.type}\n" +
                 $"Merkki:\t\t{this.brand}\n" +
                 $"Vuosimalli:\t{this.year}\n" +
-                $"Hinta:\t\t{this.price}\n");
+                $"Hinta:\t\t{this.price.ToString("c", CultureInfo.CurrentCulture)}\n");
         }
     }
 }
