@@ -43,7 +43,7 @@ namespace Tuoterekisteriohjelma
 
                     case ConsoleKey.D4:
                         Console.Clear();
-                        Console.WriteLine("1.Lisää kommentti\n" +
+                        Console.WriteLine("1. Lisää kommentti\n" +
                             "2. Poista kommentti");
                         input = Console.ReadKey();
                         if(input.Key == ConsoleKey.D1)
@@ -131,7 +131,8 @@ namespace Tuoterekisteriohjelma
 
         static void Intro()
         {
-            Console.WriteLine("1. Tulosta kaikki tuotteet.\n" +
+            Console.WriteLine("TUOTEREKISTERIOHJELMA\n" +
+                "1. Tulosta kaikki tuotteet.\n" +
                 "2. Tulosta tuotteet ryhmän mukaan.\n" +
                 "3. Tulosta loppuunmyydyt tuotteet.\n" +
                 "4. Lisää tai poista kommentti.\n" +
