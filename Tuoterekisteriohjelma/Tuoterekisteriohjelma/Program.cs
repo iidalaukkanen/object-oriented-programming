@@ -131,10 +131,10 @@ namespace Tuoterekisteriohjelma
 
         static void Intro()
         {
-            Console.WriteLine("1. Tulosta kaikki tuotteet." +
-                "2. Tulosta tuotteet ryhmän mukaan." +
-                "3. Tulosta loppuunmyydyt tuotteet." +
-                "4. Lisää tai poista kommentti." +
+            Console.WriteLine("1. Tulosta kaikki tuotteet.\n" +
+                "2. Tulosta tuotteet ryhmän mukaan.\n" +
+                "3. Tulosta loppuunmyydyt tuotteet.\n" +
+                "4. Lisää tai poista kommentti.\n" +
                 "X. Poistu ohjelmasta.");
         }
     }
