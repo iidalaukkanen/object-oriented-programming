@@ -57,7 +57,7 @@ namespace Tuoterekisteriohjelma
         {
             string content = string.Empty;
             Console.Clear();
-            Console.WriteLine($"Ryhmän '{group}' tuotteet: \n_______________________________________\n)";
+            Console.WriteLine($"Ryhmän '{group}' tuotteet: \n_______________________________________\n");
             foreach (var item in _itemList)
             {
                 if (item.GroupName == group)

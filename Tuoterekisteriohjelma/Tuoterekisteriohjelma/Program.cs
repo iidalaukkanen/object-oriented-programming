@@ -7,7 +7,7 @@ namespace Tuoterekisteriohjelma
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            string filePath = @"Tämä tietokone\Tiedostot\Dev\temp\items.json";
+            string filePath = @"C:\Dev\temp\items.json";
             FileManager file = new FileManager(filePath);
             file.ReadJson();
 
